@@ -99,8 +99,8 @@ jobs:
         with:
           push: true
           tags: |
-            pefa2020/601_module9:latest
-            pefa2020/601_module9:${{ github.sha }}
+            pefa2020/601_module10:latest
+            pefa2020/601_module10:${{ github.sha }}
           platforms: linux/amd64,linux/arm64
-          cache-from: type=registry,ref=pefa2020/601_module9:cache
+          cache-from: type=registry,ref=pefa2020/601_module10:cache
           cache-to: type=inline,mode=max
