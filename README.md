@@ -214,7 +214,43 @@ docker run -it --rm <image-name>
 
 ---
 
-# 📝 7. Submission Instructions
+# � 7. Running Tests Locally
+
+## Unit Tests
+
+```bash
+# Activate virtual environment
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate.bat  # Windows
+
+# Run unit tests
+pytest tests/unit/ -v
+```
+
+## Integration Tests
+
+```bash
+# Ensure PostgreSQL is running (via Docker or locally)
+pytest tests/integration/ -v
+```
+
+## All Tests with Coverage Report
+
+```bash
+pytest tests/ -v --cov=app --cov-report=html
+```
+
+The coverage report will be generated in the `htmlcov/` directory. Open `htmlcov/index.html` in your browser to view detailed coverage statistics.
+
+## E2E Tests
+
+```bash
+pytest tests/e2e/ -v
+```
+
+---
+
+# 📝 8. Submission Instructions
 
 After finishing your work:
 
@@ -262,3 +298,4 @@ Then submit the GitHub repository link as instructed.
 - [Python Downloads](https://www.python.org/downloads/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [GitHub SSH Setup Guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+- [Docker Hub Repository](https://hub.docker.com/r/pefa2020/601_module10)
